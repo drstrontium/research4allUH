@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Research4All</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #f4f4f4 25%, #c41230 100%);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        .container {
+            width: 80%;
+            max-width: 1200px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Header Styles */
+        header {
+            background-color: #c41230;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+            margin-bottom: 20px;
+            animation: slideDown 0.5s ease-in-out;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        /* Navigation Styles */
+        nav {
+            background-color: #222;
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 15px 20px;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #444;
+            color: #c41230;
+        }
+
+        /* Tab Content Styles */
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+            text-align: center;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 1s ease-in-out;
+        }
+        .tab-content h2 {
+            font-size: 2rem;
+            margin-top: 0;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+        .tab-content p, .tab-content ul {
+            line-height: 1.8;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+        .tab-content ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .tab-content ul li {
+            margin-bottom: 10px;
+            animation: fadeInUp 0.5s ease-in-out;
+        }
+        .tab-content ul li a {
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .tab-content ul li a:hover {
+            color: #c41230;
+        }
+
+        /* Footer Styles */
+        footer {
+            background-color: #222;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+            box-shadow: 0 -4px 8px rgba(0,0,0,0.3);
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        @keyframes slideDown {
+            from { transform: translateY(-100%); }
+            to { transform: translateY(0); }
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(20px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Research4All</h1>
+</header>
+
+<nav>
+    <a href="#" class="tablink" onclick="openTab(event, 'home')">Home</a>
+    <a href="#" class="tablink" onclick="openTab(event, 'labs')">Labs</a>
+    <a href="#" class="tablink" onclick="openTab(event, 'programs')">Programs</a>
+</nav>
+
+<div class="container">
+    <div id="home" class="tab-content active">
+        <h2>Welcome to Research4All</h2>
+        <p>Research4All is dedicated to fostering a community of learning and exploration among undergraduate students. Our mission is to provide access to research opportunities across various disciplines, allowing students to gain invaluable hands-on experience and contribute meaningfully to their academic and professional development.</p>
+        <p>Through partnerships with leading faculty members and research institutions, we aim to democratize access to research, making it accessible to all students regardless of background or financial resources.</p>
+    </div>
+
+    <div id="labs" class="tab-content">
+        <h2>Labs</h2>
+        <ul>
+            <li><a href="http://chen.chem.uh.edu/" target="_blank">Tai-Yen Chen's Lab in Biochemistry </a></li>
+            <li><a href="https://mohanlab.bme.uh.edu" target="_blank">Chandra Mohan's Lab in Biomedical Sciences</a></li>
+            <li><a href="https://www.opt.uh.edu/about/directory/profiles/vivien-coulson-thomas/" target="_blank">Vivien J. Coulson-Thomas' Lab in Optometry</a></li>
+            <li><a href="http://receptor.nsm.uh.edu/" target="_blank">Mehmet Sen's Lab in Biochemistry</a></li>
+            <li><a href="http://nsmn1.uh.edu/dgraur/" target="_blank">Dan Graur's Lab in Computational Biology</a></li>
+            <li><a href="https://uh.edu/medicine/about/faculty/ben-king/" target="_blank">Ben King's Lab in Epidemiology</a></li>
+            <li><a href="https://uh.edu/honors/about/faculty-staff/marc-hanke.php" target="_blank">Marc Hanke's Lab in Marine Biology</a></li>
+
+        </ul>
+    </div>
+
+    <div id="programs" class="tab-content">
+        <h2>Programs</h2>
+        <ul>
+            <li><strong style="font-size: 1.5em;">STEM Research Opportunities</strong></li>
+                <ul>
+                    <li><a href="https://sse.tulane.edu/lbrn/summer-research-program" target="_blank">Louisiana Biomedical Research Network (LBRN) Summer Research Program at Tulane University</a></li>
+                    <li><a href="https://www.mdanderson.org/education-training/clinical-research-training/graduate-medical-education/summer-research-program.html" target="_blank">Summer Program in Cancer Research at MD Anderson</a></li>
+                    <li><a href="https://www.pbrc.edu/about/" target="_blank">Pennington Biomedical Research Center at Louisiana State University</a></li>
+                    <li><a href="https://www.bcm.edu/education/graduate-school-of-biomedical-sciences/degree-programs-and-certificates/student-development-programs/smart-program" target="_blank">SMART Program - Summer Medical and Research Training Program at Baylor College of Medicine</a></li>
+                    <li><a href="https://www.mdanderson.org/education-training/research-training/early-career-pathway-programs/summer-research-programs/programs/cprit-cure.html" target="_blank">CPRIT CURE Summer Undergraduate Program at MD Anderson</a></li>
+                </ul>
+            
+                <li><strong style="font-size: 1.5em;">Social Sciences and Humanities Research Opportunities</strong></li>
+                <ul>
+                    <li><a href="https://theleadershipalliance.org/summer-research-early-identification-program" target="_blank">Leadership Alliance Summer Research Early Identification Institute</a></li>
+                    <li><a href="https://www.rise.rutgers.edu/" target="_blank">Rutgers Undergraduate Summer Institute (RISE)</a></li>
+                    <li><a href="https://www.grad.uiowa.edu/diversity/SROP" target="_blank">SROP at University of Iowa</a></li>
+                    <li><a href="http://www.bsos.umd.edu/diversity/summer-research-initiative" target="_blank">U Maryland School of Behavioral and Social Sciences</a></li>
+                    <li><a href="https://btaa.org/resources-for/students/srop/how-to-apply" target="_blank">SROP-Gateway to Education at Big 10 Universities</a></li>
+                    <li><a href="https://grad.ucr.edu/register/MSRIP" target="_blank">UC Riverside Summer Mentoring Program</a></li>
+                    <li><a href="https://murap.unc.edu/fellow/summer-2023-information-session/" target="_blank">Moore Undergraduate Research Apprentice Program (MURAP) at UNC Chapel Hill</a></li>
+                    <li><a href="https://www.nsf.gov/crssprgm/reu/list_result.jsp?unitid=5054" target="_blank">National Science Foundation Summer Institutes</a></li>
+                    <li><a href="https://borderreu.nmsu.edu/" target="_blank">Collaborative Site Program on Immigration Policy and US-Mexico Border Communities at NMSU</a></li>
+                    <li><a href="https://u.osu.edu/blnsummer/" target="_blank">The Science of Language at Ohio University</a></li>
+                    <li><a href="https://www.unl.edu/summerprogram/health" target="_blank">Community-Engaged Training for Advancing Health Equity at University of Nebraska-Lincoln</a></li>
+                    <li><a href="https://lab.vanderbilt.edu/political-science-reu/" target="_blank">Summer Program in Accountability, Behavior & Conflict in Democratic Politics at Vanderbilt University</a></li>
+                    <li><a href="http://www.americanbarfoundation.org/research/Fellowshipopportunities/Summer_Undergraduate_Research_Fellowship_Program.html" target="_blank">Montgomery Summer Research Diversity Fellows in Law and Social Sciences at American Bar Foundation</a></li>
+                    <li><a href="https://www.apsanet.org/DIVERSITY/Ralph-Bunche-Summer-Institute" target="_blank">APSA Ralph Bunche Summer Institute</a></li>
+                    <li><a href="https://hertogfoundation.org/programs/political-studies" target="_blank">Hertog Foundation Political Studies</a></li>
+                    <li><a href="https://rangelprogram.org/summer-enrichment-program/overview-eligibility/" target="_blank">Charles B. Rangel Summer Enrichment Program</a></li>
+                    <li><a href="https://ppiaprogram.org/page/junior-summer-institute" target="_blank">PPIA Junior Summer Institutes</a></li>
+                    <li><a href="https://www.nypl.org/help/about-nypl/fellowships-institutes/schomburg-mellon-humanities-summer-institute" target="_blank">Schomburg-Mellon Humanities Summer Institute at New York Public Library</a></li>
+                    <li><a href="https://librarycompany.org/mellon-scholars-internship-workshop-program-2/" target="_blank">Mellon Scholars Summer Internship and Workshop at Library Company of Philadelphia</a></li>
+                </ul>
+            </ul></ul>
+    </div>
+</div>
+
+<footer>
+    <p>&copy; 2024 Research4All. All rights reserved.</p>
+</footer>
+
+<script>
+    function openTab(evt, tabName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tab-content");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablink");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(tabName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+
+    // Default open tab
+    document.getElementsByClassName("tablink")[0].click();
+</script>
+
+</body>
+</html>
